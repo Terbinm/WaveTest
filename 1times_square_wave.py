@@ -33,7 +33,8 @@ square_wave = generate_square_wave(frequency, duration, amplitude, duty_cycle)
 start_time = time.time()
 
 # 播放方波
-sd.play(square_wave)
+sd.play(square_wave, device=1)
+
 
 print("-------- 開始播放 --------")
 print(f"播放時長: {duration} s")
