@@ -42,7 +42,7 @@ time.sleep(0.1)
 start_time = time.time()
 
 # 播放方波
-sd.play(square_wave)
+sd.play(square_wave, device=1)
 
 
 # 顯示播放進度和其他參數
