@@ -38,9 +38,10 @@ class SquareWaveGenerator:
 
         time.sleep(0.1)
         start_time = time.time()
-        sd.play(square_wave, device=1)
+        sd.play(square_wave)  # windows
+        sd.play(square_wave, device=1)  # Linux
 
-        for i in tqdm(range(0, int(self.duration))):
+        for _ in tqdm(range(0, int(self.duration))):
             current_time = time.time()
             elapsed_time = current_time - start_time
             time.sleep(1)
